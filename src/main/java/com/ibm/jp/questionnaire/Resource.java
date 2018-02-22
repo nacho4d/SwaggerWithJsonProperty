@@ -45,6 +45,10 @@ public class Resource {
         message = "message(expected key: projectName): " + (project.getName() == null ? "null" : ("'" + project.getName() + "'"));
         message += ", years(expected key: number-of-years): '" + project.getYears() + "'";
         message += ", finished(expected key: 完了): '" + project.isFinished() + "'";
+        message += ", completed(expected key: 完了ヌルあり): " +
+                (project.getCompleted() == null ? "null" : ("'" + project.getCompleted() + "'"));
+        message += ", number(expected key: 現在住まい広さ): " +
+                (project.getNumber() == null ? "null" : ("'" + project.getNumber() + "'"));
         ResultWithJsonProperty r = new ResultWithJsonProperty();
         r.setMessage(message);
         return r;
